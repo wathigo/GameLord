@@ -34,9 +34,7 @@ function check({ target }) {
 function checkScore() {
   document.querySelectorAll(".box").forEach((bx) => {
     if (bx.style.color !== "black") {
-      setTimeout(() => {
-        bx.style.borderColor = "red";
-      }, 1);
+      bx.style.borderColor = "red";
     } else {
       score = parseInt(score) + parseInt(bx.dataset.val);
       bx.innerHTML = `${bx.dataset.val} won!`;
@@ -49,6 +47,7 @@ function renderGrid() {
   const indx = [1, 2, 3];
   document.querySelector("#result").addEventListener("click", () => {
     checkScore();
+    document.querySelector(".score").innerHTML = `${score} CELO`;
   });
   indx.forEach((indx) => {
     document.querySelectorAll(`.row-${indx}`).forEach((box) => {

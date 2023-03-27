@@ -23,6 +23,8 @@
       rel="stylesheet"
     />
 
+    <link href="https://fonts.cdnfonts.com/css/calculator" rel="stylesheet" />
+
     <style>
       :root {
         --bs-font-sans-serif: "DM Sans", sans-serif;
@@ -39,6 +41,47 @@
           width: 100%;
           height: 20vw;
           object-fit: cover;
+        }
+
+        .grid,
+        .box {
+          margin: 0;
+          padding: 0;
+        }
+
+        .grid {
+          width: 70%;
+          margin: 0 auto;
+          display: none;
+          background-color: black;
+          color: #00b612;
+          padding: 3em;
+          font-size: x-large;
+          font-family: "Calculator", sans-serif;
+          font-weight: bold;
+        }
+
+        .box {
+          display: inline-block;
+          width: 30%;
+          text-align: center;
+          border: 2px dotted #00b612;
+        }
+
+        .closeGrid {
+          text-align: right;
+          display: block;
+          cursor: pointer;
+        }
+
+        .istr {
+          display: block;
+        }
+
+        .grid button {
+          background-color: #00b612;
+          color: black;
+          float: right;
         }
       }
     </style>
@@ -63,31 +106,23 @@
       </div>
 
       <div class="mb-4" style="margin-top: 4em">
-        <a
-          class="btn btn-dark rounded-pill"
-          data-bs-toggle="modal"
-          data-bs-target="#addModal"
-        >
-          Play Now
-        </a>
+        <a class="btn btn-dark rounded-pill toggleGrid"> Play Now </a>
       </div>
       <div id="session">
-        <div class="row">
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
+        <div class="grid">
+          <span class="closeGrid">X</span>
+          <span class="istr">Choose one box in each row</span>
+          <div class="box row-1">80</div>
+          <div class="box row-1">80</div>
+          <div class="box row-1">80</div>
+          <div class="box row-2">80</div>
+          <div class="box row-2">80</div>
+          <div class="box row-2">80</div>
+          <div class="box row-3">80</div>
+          <div class="box row-3">80</div>
+          <div class="box row-3">80</div>
+          <button>Check</button>
         </div>
-        <div class="row">
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-        </div>
-        <div class="row">
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-        </div>
-        <button>Spin</button>
       </div>
       <main id="marketplace" class="row"></main>
     </div>

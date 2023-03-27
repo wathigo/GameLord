@@ -55,7 +55,7 @@
           display: none;
           background-color: black;
           color: #00b612;
-          padding: 3em;
+          padding: 1em 1em 3em 3em;
           font-size: x-large;
           font-family: "Calculator", sans-serif;
           font-weight: bold;
@@ -66,6 +66,7 @@
           width: 30%;
           text-align: center;
           border: 2px dotted #00b612;
+          height: 1.2em;
         }
 
         .closeGrid {
@@ -111,17 +112,17 @@
       <div id="session">
         <div class="grid">
           <span class="closeGrid">X</span>
-          <span class="istr">Choose one box in each row</span>
-          <div class="box row-1">80</div>
-          <div class="box row-1">80</div>
-          <div class="box row-1">80</div>
-          <div class="box row-2">80</div>
-          <div class="box row-2">80</div>
-          <div class="box row-2">80</div>
-          <div class="box row-3">80</div>
-          <div class="box row-3">80</div>
-          <div class="box row-3">80</div>
-          <button>Check</button>
+          <span class="istr">Choose one box on each row</span>
+          <div class="box row-1"></div>
+          <div class="box row-1"></div>
+          <div class="box row-1"></div>
+          <div class="box row-2"></div>
+          <div class="box row-2"></div>
+          <div class="box row-2"></div>
+          <div class="box row-3"></div>
+          <div class="box row-3"></div>
+          <div class="box row-3"></div>
+          <button id="result">Check</button>
         </div>
       </div>
       <main id="marketplace" class="row"></main>
